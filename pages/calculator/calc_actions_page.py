@@ -1,6 +1,6 @@
-from pages.base_page import BasePage
+from pages.calculator.base_page import BasePage
 
-class StandardPage(BasePage):
+class CalcActionsPage(BasePage):
 
     def summarize_numbers(self, num1, num2) -> int:
         self.click_number(num1)

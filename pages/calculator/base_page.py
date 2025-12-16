@@ -15,7 +15,6 @@ class BasePage:
             control_type="Window"
         )
         self.window_app.wait("visible", timeout=4)
-        self.window_app.print_control_identifiers()
 
     def click_number(self, number: int):
         for digit in str(number):
