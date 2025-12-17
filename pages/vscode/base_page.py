@@ -17,3 +17,19 @@ class BaseVSCodePage:
     @property
     def editor(self):
         return self.window.child_window(auto_id="workbench.parts.editor")
+    
+    @property
+    def extensions_button(self):
+        return self.window.child_window(title="Extensions (Ctrl+Shift+X)", control_type="Button")
+    
+    @property
+    def extensions_search(self):
+        return self.window.child_window(control_type="Text(50020)")
+    
+    @property
+    def new_file_button(self):
+        return self.window.child_window(title="New File...", control_type="Button")
+
+    @property
+    def editor_area(self):
+        return self.window.child_window(control_type="Select File Type or Enter File Name... - New File...")
