@@ -22,3 +22,13 @@ def test_create_new_file_and_type_text(vscode_app):
     page.create_new_file()
     page.type_code("Hello, World!")
     assert page.editor_area.exists()
+
+def test_prepare_dev_environment(vscode_app):
+    page = VSCodeActionsPage(vscode_app)
+    page.open_extensions()
+    page.search_extension("Python")
+    page.install_extension()
+    assert page.is_installed()
+    page.create_new_file("script.js")
+    page.type_code("console.log(`Hello, World!`)")
+    page.save_file()

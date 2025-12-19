@@ -33,3 +33,7 @@ class BaseVSCodePage:
     @property
     def editor_area(self):
         return self.window.child_window(control_type="Select File Type or Enter File Name... - New File...")
+    
+    @property
+    def necessary_extension(self):
+        return self.window.child_window(auto_id="list_id_5_0")
